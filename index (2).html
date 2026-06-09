@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ksenia Yankovskaya — QA Engineer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f9f7;
+      --surface: #ffffff;
+      --border: #e4e4e0;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #2a5caa;
+      --accent-light: #e8f0fb;
+      --tag-bg: #eef2f9;
+      --tag-text: #2a5caa;
+      --section-gap: 2.5rem;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .header-inner .role-badge {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .hero .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .hero .contacts a, .hero .contacts span {
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .hero .contacts a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── Section ── */
+    section { margin-top: var(--section-gap); }
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── Summary ── */
+    .summary p { color: #333; max-width: 72ch; }
+
+    /* ── Skills grid ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .skill-group h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .job:last-child { border-bottom: none; margin-bottom: 0; }
+    .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.25rem; }
+    .job-title { font-size: 1.05rem; font-weight: 700; }
+    .job-dates { font-size: 0.85rem; color: var(--muted); white-space: nowrap; }
+    .job-company { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-bottom: 0.2rem; }
+    .job-project { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-bottom: 0.75rem; }
+    .job ul { padding-left: 1.2rem; }
+    .job li { margin-bottom: 0.35rem; font-size: 0.92rem; color: #333; }
+    .job-stack {
+      margin-top: 0.8rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .job-stack strong { color: var(--text); }
+
+    /* ── Certs & Education ── */
+    .cert-list, .edu-list { list-style: none; }
+    .cert-list li, .edu-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .cert-list li:last-child, .edu-list li:last-child { border-bottom: none; }
+    .cert-name { font-weight: 500; }
+    .cert-issuer { font-size: 0.85rem; color: var(--muted); }
+    .cert-year { font-size: 0.85rem; color: var(--muted); white-space: nowrap; }
+
+    /* ── Extra ── */
+    .extra-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+    .extra-item h4 { font-size: 0.82rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+    .extra-item p { font-size: 0.9rem; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .job-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <span class="role-badge">QA Automation Engineer</span>
+    <span>Ksenia Yankovskaya</span>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Ksenia&nbsp;Yankovskaya</h1>
+    <p class="subtitle">Senior QA Engineer · 5+ years · ISTQB certified</p>
+    <div class="contacts">
+      <a href="mailto:ksenilin@gmail.com">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        ksenilin@gmail.com
+      </a>
+      <a href="tel:+37443292372">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.08 4.18 2 2 0 0 1 5.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 23 17z"/></svg>
+        +374 43 29 23 72
+      </a>
+      <span>
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        Armenia
+      </span>
+      <a href="https://linkedin.com/in/kseniya-yankovskaya" target="_blank" rel="noopener">
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/kseniya-yankovskaya
+      </a>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <section class="summary">
+    <div class="section-title">Summary</div>
+    <p>Senior QA Engineer with 5+ years of experience in web, mobile, API and backend testing, including 3 years in fintech platforms. Strong expertise in API, integration, end-to-end, regression and exploratory testing of distributed client-server systems. Experienced in validating authentication and authorization flows using OAuth 2.0 and OpenID Connect, ensuring data integrity and secure user access. Hands-on experience with Postman, SQL/PostgreSQL, Playwright and Python-based test automation. Skilled in requirements analysis, risk-based testing, CI/CD validation, release verification and cross-functional collaboration within Agile teams.</p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Security &amp; Fintech</h4>
+        <div class="tags">
+          <span class="tag">OAuth 2.0</span>
+          <span class="tag">OpenID Connect</span>
+          <span class="tag">SSO</span>
+          <span class="tag">Token Management</span>
+          <span class="tag">API Security</span>
+          <span class="tag">Access Control</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Automation</h4>
+        <div class="tags">
+          <span class="tag">Playwright</span>
+          <span class="tag">Python</span>
+          <span class="tag">pytest</span>
+          <span class="tag">Selenium</span>
+          <span class="tag">Postman</span>
+          <span class="tag">requests</span>
+          <span class="tag">SpecFlow</span>
+          <span class="tag">Cucumber</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Testing</h4>
+        <div class="tags">
+          <span class="tag">REST API</span>
+          <span class="tag">Integration Testing</span>
+          <span class="tag">End-to-End</span>
+          <span class="tag">Regression</span>
+          <span class="tag">Exploratory</span>
+          <span class="tag">Risk-Based</span>
+          <span class="tag">BDD / Gherkin</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools &amp; Stack</h4>
+        <div class="tags">
+          <span class="tag">Azure DevOps</span>
+          <span class="tag">Jira</span>
+          <span class="tag">TestRail</span>
+          <span class="tag">Docker</span>
+          <span class="tag">SQL / PostgreSQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Sentry</span>
+          <span class="tag">Datadog</span>
+          <span class="tag">Octopus Deploy</span>
+          <span class="tag">Snowflake</span>
+          <span class="tag">Swagger</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Methodology</h4>
+        <div class="tags">
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">Kanban</span>
+          <span class="tag">SAFe</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Chrome DevTools</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section>
+    <div class="section-title">Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Senior QA Engineer</span>
+        <span class="job-dates">Mar 2023 — Apr 2026</span>
+      </div>
+      <div class="job-company">Access Softek</div>
+      <div class="job-project">Fintech Platform (SSO &amp; Authentication)</div>
+      <ul>
+        <li>Led end-to-end testing of fintech web and mobile (Android, iOS) applications with a focus on secure authentication and SSO integrations. Performed cross-browser and cross-platform validation for web applications.</li>
+        <li>Validated OAuth 2.0 and OpenID Connect flows — token lifecycle, session management, and user access control.</li>
+        <li>Analyzed application logs and traces for root-cause investigation.</li>
+        <li>Performed REST API, integration, and end-to-end testing for identity and authentication services, improving cross-platform reliability.</li>
+        <li>Strengthened regression coverage for authentication flows, reducing risk of critical production defects.</li>
+        <li>Collaborated with developers and product teams to resolve security-critical issues in authentication and authorization.</li>
+        <li>Configured and maintained QA environments, ensuring stability across staging and release pipelines.</li>
+        <li>Managed deployment validation using Octopus Deploy, ensuring integrity of releases. Participated in CI/CD validation and release verification processes.</li>
+        <li>Contributed to quality gates for security-sensitive features, improving release confidence.</li>
+      </ul>
+      <p class="job-stack"><strong>Stack:</strong> Agile (Scrum), Jira, Confluence, BDD (Gherkin), Azure DevOps, Octopus Deploy, Mobile Build Tools</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Senior QA Engineer</span>
+        <span class="job-dates">Dec 2021 — current</span>
+      </div>
+      <div class="job-company">Quantori</div>
+      <div class="job-project">Operations Management Software</div>
+      <ul>
+        <li>Led the full QA lifecycle — test strategy, processes, and quality standards.</li>
+        <li>Designed and maintained BDD-based test scenarios and synchronized them with manual test cases.</li>
+        <li>Built and optimized smoke and regression test suites, improving release reliability.</li>
+        <li>Introduced structured QA processes and documentation, increasing team efficiency.</li>
+        <li>Mentored junior QA engineers and supported onboarding.</li>
+        <li>Provided detailed test reports and product demos to stakeholders.</li>
+      </ul>
+      <p class="job-stack"><strong>Stack:</strong> Scrum, Azure DevOps, Azure Test Plans, Jira, Confluence, Cucumber, Gherkin</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Senior QA Engineer</span>
+        <span class="job-dates">Nov 2020 — Dec 2021</span>
+      </div>
+      <div class="job-company">Quantori</div>
+      <div class="job-project">Biopharma Software Solutions</div>
+      <ul>
+        <li>Performed comprehensive testing (API, UI, integration, end-to-end) for complex scientific software systems.</li>
+        <li>Tested client-server architectures and APIs, ensuring data accuracy and system stability.</li>
+        <li>Participated in CI/CD processes and release preparation.</li>
+        <li>Designed and implemented BDD test scenarios.</li>
+        <li>Contributed to requirements analysis and improved test coverage through early QA involvement.</li>
+        <li>Supported release management and QA coordination.</li>
+      </ul>
+      <p class="job-stack"><strong>Stack:</strong> Scrum, Azure DevOps, Jira, Confluence, BDD, Cucumber</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">QA Engineer</span>
+        <span class="job-dates">Sep 2019 — Nov 2020</span>
+      </div>
+      <div class="job-company">Quantori</div>
+      <div class="job-project">Bioinformatics Software</div>
+      <ul>
+        <li>Conducted functional, API, UI, and regression testing for scientific and web-based applications.</li>
+        <li>Developed test plans and documentation for smoke and regression testing.</li>
+        <li>Participated in CI/CD processes and requirements reviews.</li>
+        <li>Supported onboarding of new team members and contributed to internal documentation.</li>
+      </ul>
+      <p class="job-stack"><strong>Stack:</strong> SQL, Git, AWS, Postman, TestRail, Confluence</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Technical Support Engineer</span>
+        <span class="job-dates">Apr 2017 — Mar 2019</span>
+      </div>
+      <div class="job-company">Intermedia</div>
+      <div class="job-project">Enterprise Software</div>
+      <ul>
+        <li>Provided technical support and issue resolution for enterprise clients.</li>
+        <li>Investigated and escalated complex technical issues.</li>
+        <li>Worked with infrastructure technologies including Active Directory, Exchange Server, DNS, and TCP/IP.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section>
+    <div class="section-title">Certifications</div>
+    <ul class="cert-list">
+      <li>
+        <div>
+          <div class="cert-name">ISTQB Foundation Level</div>
+          <div class="cert-issuer">ISTQB</div>
+        </div>
+        <span class="cert-year">2023</span>
+      </li>
+      <li>
+        <div>
+          <div class="cert-name">QA Tester: Software Testing Foundation Level</div>
+          <div class="cert-issuer">Online course</div>
+        </div>
+        <span class="cert-year">2020</span>
+      </li>
+      <li>
+        <div>
+          <div class="cert-name">Python Course for Beginners</div>
+          <div class="cert-issuer">Stepik</div>
+        </div>
+        <span class="cert-year">2025</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <div class="section-title">Education</div>
+    <ul class="edu-list">
+      <li>
+        <div>
+          <div class="cert-name">Pskov State University</div>
+          <div class="cert-issuer">Master's Degree in Linguistic Studies</div>
+        </div>
+        <span class="cert-year">2007 — 2012</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Additional -->
+  <section>
+    <div class="section-title">Additional Information</div>
+    <div class="extra-grid">
+      <div class="extra-item">
+        <h4>Languages</h4>
+        <p>Russian — Native<br>English — Fluent<br>German — Basic</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  ksenilin@gmail.com · +374 43 29 23 72 · Armenia
+</footer>
+
+</body>
+</html>
