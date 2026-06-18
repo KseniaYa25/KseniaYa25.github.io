@@ -6,62 +6,31 @@
   <title>Янковская Ксения — QA Engineer</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: #f5f5f5;
+      font-size: 15px; line-height: 1.6; color: #1a1a1a; background: #f5f5f5;
     }
-
     .page {
-      max-width: 860px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 56px 64px;
-      border-radius: 8px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      max-width: 860px; margin: 40px auto; background: #fff;
+      padding: 56px 64px; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.08);
     }
-
-    /* HEADER */
     .header { margin-bottom: 32px; }
     .header h1 { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 4px; }
     .header .subtitle { font-size: 14px; color: #555; margin-bottom: 12px; }
     .contacts { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #444; }
     .contacts a { color: #0066cc; text-decoration: none; }
     .contacts a:hover { text-decoration: underline; }
-
-    /* SECTION */
     .section { margin-bottom: 32px; }
     .section-title {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #888;
-      border-bottom: 1px solid #e8e8e8;
-      padding-bottom: 6px;
-      margin-bottom: 16px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #888; border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 6px; margin-bottom: 16px;
     }
-
-    /* SUMMARY */
     .summary { font-size: 14px; color: #333; line-height: 1.7; }
-
-    /* SKILLS */
     .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .skill-group h4 { font-size: 12px; font-weight: 600; color: #555; margin-bottom: 8px; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag {
-      background: #f0f4ff;
-      color: #2255aa;
-      font-size: 12px;
-      padding: 3px 9px;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-
-    /* EXPERIENCE */
+    .tag { background: #f0f4ff; color: #2255aa; font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 500; }
     .job { margin-bottom: 28px; }
     .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
     .job-title { font-size: 15px; font-weight: 600; color: #111; }
@@ -72,26 +41,17 @@
     .job li { font-size: 14px; color: #333; margin-bottom: 5px; line-height: 1.6; }
     .job-stack { font-size: 12px; color: #777; margin-top: 10px; }
     .job-stack strong { color: #555; }
-
-    /* CERTIFICATIONS */
     .cert-list { list-style: none; }
     .cert-list li { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
     .cert-list li:last-child { border-bottom: none; }
-    .cert-year { font-size: 12px; color: #999; }
-
-    /* EDUCATION */
+    .cert-year { font-size: 12px; color: #999; white-space: nowrap; margin-left: 12px; }
     .edu { display: flex; justify-content: space-between; align-items: baseline; }
     .edu-left h3 { font-size: 15px; font-weight: 600; }
     .edu-left p { font-size: 13px; color: #666; font-style: italic; }
     .edu-right { font-size: 13px; color: #999; }
-
-    /* ADDITIONAL */
     .additional { font-size: 14px; color: #333; line-height: 1.8; }
-
-    /* FOOTER */
     .footer { text-align: center; font-size: 12px; color: #bbb; margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
     .footer a { color: #0066cc; text-decoration: none; }
-
     @media (max-width: 640px) {
       .page { padding: 32px 24px; margin: 0; border-radius: 0; }
       .skills-grid { grid-template-columns: 1fr; }
@@ -103,102 +63,75 @@
 <body>
 <div class="page">
 
-  <!-- HEADER -->
   <div class="header">
     <h1>Янковская Ксения</h1>
     <div class="subtitle">Senior QA Engineer · 5+ лет опыта · ISTQB certified</div>
     <div class="contacts">
-      <a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a>
       <a href="tel:+79113547476">+7 911 354 74 76</a>
+      <a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a>
       <span>Санкт-Петербург</span>
       <a href="https://linkedin.com/in/kseniya-yankovskaya" target="_blank">linkedin.com/in/kseniya-yankovskaya</a>
     </div>
   </div>
 
-  <!-- SUMMARY -->
   <div class="section">
     <div class="section-title">О себе</div>
     <p class="summary">
-      Senior QA Engineer с 5+ годами опыта в тестировании веб, мобильных, API и backend-систем, включая 3 года в fintech. Экспертиза в кросс-платформенном тестировании веб и мобильных приложений (iOS, Android), E2E-тестировании пользовательских флоу, API, интеграционном, регрессионном и исследовательском тестировании распределённых клиент-серверных систем. Опыт валидации аутентификации и авторизации (OAuth 2.0, OpenID Connect), обеспечения целостности данных и безопасного доступа. Практический опыт с Postman, SQL/PostgreSQL, Playwright и автоматизацией на Python. Работала в Agile и Waterfall-окружениях.
+      Senior QA Engineer с 5+ годами опыта в тестировании веб, мобильных, API и backend-систем, включая 3 года в fintech. Экспертиза в кросс-платформенном тестировании веб и мобильных приложений (iOS, Android), E2E-тестировании, API, интеграционном, регрессионном и исследовательском тестировании распределённых клиент-серверных систем. Опыт валидации аутентификации и авторизации (OAuth 2.0, OpenID Connect), обеспечения целостности данных и безопасности доступа. Практический опыт с Postman, SQL/PostgreSQL, Playwright и базовой автоматизацией на Python.
     </p>
   </div>
 
-  <!-- SKILLS -->
   <div class="section">
-    <div class="section-title">Технические навыки</div>
+    <div class="section-title">Навыки</div>
     <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Безопасность и Fintech</h4>
-        <div class="tags">
-          <span class="tag">OAuth 2.0</span>
-          <span class="tag">OpenID Connect</span>
-          <span class="tag">SSO</span>
-          <span class="tag">Управление токенами</span>
-          <span class="tag">Контроль доступа</span>
-        </div>
-      </div>
       <div class="skill-group">
         <h4>Автоматизация</h4>
         <div class="tags">
-          <span class="tag">Playwright</span>
-          <span class="tag">Python</span>
-          <span class="tag">Selenium</span>
-          <span class="tag">Postman</span>
-          <span class="tag">Cucumber</span>
-          <span class="tag">SpecFlow</span>
+          <span class="tag">Playwright</span><span class="tag">Python</span>
+          <span class="tag">Selenium</span><span class="tag">Cucumber</span><span class="tag">SpecFlow</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>API и базы данных</h4>
+        <div class="tags">
+          <span class="tag">REST API</span><span class="tag">Postman</span><span class="tag">Swagger</span>
+          <span class="tag">SQL</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Безопасность и Fintech</h4>
+        <div class="tags">
+          <span class="tag">OAuth 2.0</span><span class="tag">OpenID Connect</span><span class="tag">SSO</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Тестирование</h4>
         <div class="tags">
-          <span class="tag">REST API</span>
-          <span class="tag">Интеграционное</span>
-          <span class="tag">E2E</span>
-          <span class="tag">Регрессионное</span>
-          <span class="tag">Исследовательское</span>
-          <span class="tag">BDD / Gherkin</span>
-          <span class="tag">Мобильное (iOS/Android)</span>
+          <span class="tag">E2E</span><span class="tag">Интеграционное</span>
+          <span class="tag">Регрессионное</span><span class="tag">Исследовательское</span>
+          <span class="tag">BDD / Gherkin</span><span class="tag">Мобильное (iOS/Android)</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Инструменты</h4>
         <div class="tags">
-          <span class="tag">Jira</span>
-          <span class="tag">TestRail</span>
-          <span class="tag">Allure</span>
-          <span class="tag">Azure DevOps</span>
-          <span class="tag">SQL/PostgreSQL</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Grafana</span>
-          <span class="tag">Datadog</span>
-          <span class="tag">Sentry</span>
-          <span class="tag">Charles Proxy</span>
-          <span class="tag">Linux CLI</span>
-          <span class="tag">Wireshark</span>
-          <span class="tag">ADB</span>
+          <span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Allure</span>
+          <span class="tag">Azure DevOps</span><span class="tag">Docker</span>
+          <span class="tag">Grafana</span><span class="tag">Datadog</span><span class="tag">Sentry</span>
+          <span class="tag">Charles Proxy</span><span class="tag">Linux CLI</span>
+          <span class="tag">Wireshark</span><span class="tag">ADB</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Методологии</h4>
         <div class="tags">
-          <span class="tag">Agile / Scrum</span>
-          <span class="tag">Waterfall</span>
-          <span class="tag">CI/CD</span>
-          <span class="tag">Chrome DevTools</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>AI-инструменты</h4>
-        <div class="tags">
-          <span class="tag">Генерация тест-кейсов</span>
-          <span class="tag">Анализ требований</span>
-          <span class="tag">Автоматизация тестов</span>
+          <span class="tag">Agile / Scrum</span><span class="tag">Waterfall</span>
+          <span class="tag">CI/CD</span><span class="tag">Chrome DevTools</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <div class="section">
     <div class="section-title">Опыт работы</div>
 
@@ -207,18 +140,15 @@
         <span class="job-title">Senior QA Engineer</span>
         <span class="job-date">март 2023 — апрель 2026</span>
       </div>
-      <div class="job-company">Access Softek</div>
-      <div class="job-project">Fintech платформа (SSO & Аутентификация)</div>
+      <div class="job-project">Fintech Platform (SSO & Authentication)</div>
       <ul>
         <li>Руководила E2E-тестированием fintech веб и мобильных приложений (iOS, Android) с фокусом на безопасную аутентификацию и SSO-интеграции</li>
-        <li>Валидировала OAuth 2.0 и OpenID Connect флоу: жизненный цикл токенов, управление сессиями, контроль доступа</li>
-        <li>Анализировала логи и трейсы для root-cause расследований (Datadog, Grafana, Sentry)</li>
+        <li>Анализировала логи и трейсы приложений для root-cause расследования (Datadog, Grafana, Sentry)</li>
         <li>Проводила REST API, интеграционное и E2E-тестирование сервисов аутентификации</li>
-        <li>Расширила регрессионное покрытие, снизив риск критических дефектов в продакшне</li>
-        <li>Управляла валидацией деплоев через Octopus Deploy, участвовала в CI/CD и верификации релизов</li>
-        <li>Вносила вклад в quality gates для security-sensitive фич</li>
+        <li>Расширила регрессионное покрытие для authentication flows, снизив риск критических дефектов в продакшне</li>
+        <li>Управляла валидацией деплоев через Octopus Deploy, участвовала в CI/CD-процессах и верификации релизов</li>
       </ul>
-      <div class="job-stack"><strong>Стек:</strong> Agile (Scrum), Jira, Confluence, BDD (Gherkin), Azure DevOps, Octopus Deploy, Mobile Build Tools</div>
+      <div class="job-stack"><strong>Среда:</strong> Agile (Scrum), Jira, Confluence, Octopus Deploy, Mobile Build Tools, Azure DevOps, Grafana</div>
     </div>
 
     <div class="job">
@@ -234,9 +164,9 @@
         <li>Создала и оптимизировала smoke и регрессионные тест-сюиты</li>
         <li>Ввела структурированные QA-процессы и документацию, повысив эффективность команды</li>
         <li>Менторила junior QA-инженеров, поддерживала онбординг</li>
-        <li>Предоставляла тест-отчёты и демонстрации продукта стейкхолдерам</li>
+        <li>Предоставляла детальные тест-отчёты и демонстрации продукта стейкхолдерам</li>
       </ul>
-      <div class="job-stack"><strong>Стек:</strong> Scrum, Waterfall, Azure DevOps, Azure Test Plans, Jira, Confluence, Cucumber, Gherkin</div>
+      <div class="job-stack"><strong>Среда:</strong> Scrum, Waterfall, Azure DevOps, Azure Test Plans, Jira, Confluence, Cucumber, Gherkin</div>
     </div>
 
     <div class="job">
@@ -248,11 +178,11 @@
       <div class="job-project">Biopharma Software Solutions</div>
       <ul>
         <li>Проводила комплексное тестирование (API, UI, интеграционное, E2E) научного ПО</li>
-        <li>Тестировала клиент-серверные архитектуры, валидировала данные через сложные SQL-запросы</li>
+        <li>Тестировала клиент-серверные архитектуры и API, валидировала данные через сложные SQL-запросы</li>
         <li>Проектировала и реализовывала BDD-сценарии</li>
         <li>Участвовала в CI/CD-процессах, подготовке релизов и анализе требований</li>
       </ul>
-      <div class="job-stack"><strong>Стек:</strong> Scrum, Azure DevOps, Jira, Confluence, BDD, Cucumber</div>
+      <div class="job-stack"><strong>Среда:</strong> Scrum, Azure DevOps, Jira, Confluence, BDD, Cucumber</div>
     </div>
 
     <div class="job">
@@ -267,7 +197,7 @@
         <li>Разрабатывала тест-планы и тестовую документацию</li>
         <li>Участвовала в CI/CD-процессах и ревью требований</li>
       </ul>
-      <div class="job-stack"><strong>Стек:</strong> SQL, Git, AWS, Postman, TestRail, Confluence</div>
+      <div class="job-stack"><strong>Среда:</strong> SQL, Git, AWS, Postman, TestRail, Confluence</div>
     </div>
 
     <div class="job">
@@ -275,7 +205,6 @@
         <span class="job-title">Инженер технической поддержки</span>
         <span class="job-date">апрель 2017 — март 2019</span>
       </div>
-      <div class="job-company">Intermedia</div>
       <div class="job-project">Enterprise Software</div>
       <ul>
         <li>Техническая поддержка и решение инцидентов для корпоративных клиентов</li>
@@ -285,7 +214,6 @@
     </div>
   </div>
 
-  <!-- CERTIFICATIONS -->
   <div class="section">
     <div class="section-title">Сертификаты</div>
     <ul class="cert-list">
@@ -296,19 +224,17 @@
     </ul>
   </div>
 
-  <!-- EDUCATION -->
   <div class="section">
     <div class="section-title">Образование</div>
     <div class="edu">
       <div class="edu-left">
         <h3>Псковский государственный университет</h3>
-        <p>Магистр лингвистики</p>
+        <p>Лингвист, переводчик</p>
       </div>
       <div class="edu-right">2007 — 2012</div>
     </div>
   </div>
 
-  <!-- ADDITIONAL -->
   <div class="section">
     <div class="section-title">Дополнительная информация</div>
     <div class="additional">
@@ -317,8 +243,7 @@
   </div>
 
   <div class="footer">
-    <a href="https://kseniaya25.github.io/">English version</a> &nbsp;·&nbsp;
-    ksenilin@gmail.com · +7 911 354 74 76 · Санкт-Петербург
+    ksenilin@gmail.com &nbsp;·&nbsp; +7 911 354 74 76 &nbsp;·&nbsp; Санкт-Петербург
   </div>
 
 </div>
