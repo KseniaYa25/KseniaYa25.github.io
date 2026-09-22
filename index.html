@@ -3,241 +3,104 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ksenia Yankovskaya — QA Engineer</title>
+<title>Ksenia Yankovskaya — Senior QA Engineer</title>
+<meta name="description" content="Senior QA Engineer: API &amp; integration testing, fintech and life sciences, AI QA agents." />
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
-.page { max-width: 860px; margin: 40px auto; background: #fff; padding: 56px 64px; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-.header { margin-bottom: 32px; }
-.header h1 { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 4px; }
-.header .subtitle { font-size: 14px; color: #555; margin-bottom: 12px; }
-.contacts { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #444; }
-.contacts a { color: #0066cc; text-decoration: none; }
-.contacts a:hover { text-decoration: underline; }
-.section { margin-bottom: 32px; }
-.section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; border-bottom: 1px solid #e8e8e8; padding-bottom: 6px; margin-bottom: 16px; }
-.summary { font-size: 14px; color: #333; line-height: 1.7; }
-.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.skill-group h4 { font-size: 12px; font-weight: 600; color: #555; margin-bottom: 8px; }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { background: #f0f4ff; color: #2255aa; font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 500; }
-.tag.highlight { background: #e8f5e9; color: #1b5e20; }
-.job { margin-bottom: 28px; }
-.job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
-.job-title { font-size: 15px; font-weight: 600; color: #111; }
-.job-date { font-size: 13px; color: #888; white-space: nowrap; }
-.job-company { font-size: 13px; color: #555; margin-bottom: 2px; }
-.job-project { font-size: 13px; color: #777; font-style: italic; margin-bottom: 10px; }
-.job ul { padding-left: 18px; }
-.job li { font-size: 14px; color: #333; margin-bottom: 5px; line-height: 1.6; }
-.job-stack { font-size: 12px; color: #777; margin-top: 10px; }
-.job-stack strong { color: #555; }
-.cert-list { list-style: none; }
-.cert-list li { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
-.cert-list li:last-child { border-bottom: none; }
-.cert-year { font-size: 12px; color: #999; white-space: nowrap; margin-left: 12px; }
-.edu { display: flex; justify-content: space-between; align-items: baseline; }
-.edu-left h3 { font-size: 15px; font-weight: 600; }
-.edu-left p { font-size: 13px; color: #666; font-style: italic; }
-.edu-right { font-size: 13px; color: #999; }
-.additional { font-size: 14px; color: #333; line-height: 1.8; }
-.footer { text-align: center; font-size: 12px; color: #bbb; margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
-.footer a { color: #0066cc; text-decoration: none; }
-@media (max-width: 640px) { .page { padding: 32px 24px; margin: 0; border-radius: 0; } .skills-grid { grid-template-columns: 1fr; } .job-header { flex-direction: column; } .edu { flex-direction: column; } }
+:root{--bg:#f5f5f5;--card:#fff;--text:#1a1a1a;--muted:#555;--faint:#777;--line:#e8e8e8;--accent:#0066cc;--tag:#f0f4ff;--tagtext:#1f3b73;--hi:#e8f5e9;--hitext:#1e5b2a}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e22;--text:#e8e8e8;--muted:#b3b3b3;--faint:#8d8d8d;--line:#2c3036;--accent:#5aa2ff;--tag:#1f2a3d;--tagtext:#c9d8f5;--hi:#1d3323;--hitext:#bfe3c6}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55}
+.card{max-width:860px;margin:32px auto;background:var(--card);padding:56px 64px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.lang{font-size:13px;white-space:nowrap}.lang a,.lang span{margin-left:8px}.lang span{color:var(--faint)}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:16px;margin:0 0 10px}
+.contacts{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin:36px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.skill h3{font-size:13px;margin:0 0 6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:var(--tag);color:var(--tagtext);font-size:12.5px;padding:3px 9px;border-radius:12px}
+.job{margin:0 0 26px}
+.jhead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.role{font-weight:650;font-size:16px}.company{color:var(--muted)}
+.dates{color:var(--faint);font-size:13.5px;white-space:nowrap}
+.proj{color:var(--muted);font-style:italic;font-size:14px;margin:2px 0 6px}
+ul{margin:6px 0 6px;padding-left:20px}li{margin:3px 0}
+.env{font-size:13px;color:var(--faint)}.env b{color:var(--muted);font-weight:600}
+.hi{background:var(--hi);color:var(--hitext);padding:1px 6px;border-radius:4px}
+.flat{margin:0}
+footer{margin-top:40px;font-size:12px;color:var(--faint)}
+@media (max-width:640px){.card{margin:0;padding:28px 16px;border-radius:0}.skills{grid-template-columns:1fr}.top{flex-direction:column-reverse}.lang a,.lang span{margin:0 8px 0 0}}
+@media print{body{background:#fff}.card{box-shadow:none;margin:0;padding:0}.lang{display:none}}
 </style>
 </head>
 <body>
-<div class="page">
-<div class="header">
-<h1>Ksenia Yankovskaya</h1>
-<div class="subtitle">Senior QA Engineer · 6+ years · ISTQB certified</div>
-<div class="contacts">
-<a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a>
-<a href="tel:+37443292372">+374 43 29 23 72</a>
-<span>Armenia · Open to relocation</span>
-<a href="https://linkedin.com/in/kseniya-yankovskaya" target="_blank">linkedin.com/in/kseniya-yankovskaya</a>
+<main class="card">
+<div class="top"><div><h1>Ksenia Yankovskaya</h1><p class="sub">Senior QA Engineer · AI QA Agents · API &amp; Integration Testing · Python · Playwright · SQL</p><div class="contacts"><a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a><a href="tel:+37443292372">+374 43 29 23 72</a><a href="https://linkedin.com/in/kseniya-yankovskaya">LinkedIn</a><a href="https://github.com/KseniaYa25">GitHub</a><span>Armenia · open to relocation</span></div></div><div class="lang"><span>EN</span><a href="ru.html">RU</a></div></div>
+<h2>Summary</h2><p class="flat">Senior QA Engineer with 6+ years of experience in web, mobile, API and backend testing, including 3 years in fintech platforms. Proven track record leading QA end-to-end: test strategy, quality standards, engineer mentoring, and cross-functional collaboration. Strong expertise in OAuth 2.0, OpenID Connect, and API integration testing of distributed client-server systems. Most recently responsible for the QA agent team in agentic product development — designed API, UI, E2E, Lead and coverage-Auditor agents in Claude Code, working spec-driven from requirements. ISTQB certified, Anthropic Claude Code certified.</p>
+<h2>Technical Skills</h2><div class="skills">
+<div class="skill"><h3>AI &amp; Agentic QA</h3><div class="tags"><span class="tag">Claude Code (Anthropic certified)</span><span class="tag">Multi-agent QA teams</span><span class="tag">Subagents &amp; skills</span><span class="tag">Spec-driven development</span><span class="tag">Coverage auditing</span><span class="tag">Chrome MCP</span><span class="tag">Git worktrees</span></div></div>
+<div class="skill"><h3>API &amp; Data</h3><div class="tags"><span class="tag">Postman</span><span class="tag">REST</span><span class="tag">Swagger</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">phpMyAdmin</span></div></div>
+<div class="skill"><h3>Automation</h3><div class="tags"><span class="tag">Python (Basic)</span><span class="tag">PyTest</span><span class="tag">Playwright (Basic)</span><span class="tag">Selenium (Basic)</span><span class="tag">Allure</span></div></div>
+<div class="skill"><h3>Testing</h3><div class="tags"><span class="tag">Manual</span><span class="tag">API</span><span class="tag">E2E</span><span class="tag">Integration</span><span class="tag">Regression</span><span class="tag">Exploratory</span><span class="tag">Smoke</span><span class="tag">BDD (Cucumber, SpecFlow, Gherkin)</span></div></div>
+<div class="skill"><h3>Enterprise Platforms</h3><div class="tags"><span class="tag">LabVantage LIMS</span><span class="tag">OpenClinica</span><span class="tag">MuleSoft Anypoint</span><span class="tag">Azure Service Bus</span><span class="tag">SageX3</span><span class="tag">Kafka (Basic)</span></div></div>
+<div class="skill"><h3>Auth &amp; Security</h3><div class="tags"><span class="tag">OAuth 2.0</span><span class="tag">OpenID Connect</span><span class="tag">SSO</span><span class="tag">Token/Session Mgmt</span></div></div>
+<div class="skill"><h3>CI/CD &amp; Monitoring</h3><div class="tags"><span class="tag">Azure DevOps</span><span class="tag">Octopus Deploy</span><span class="tag">Docker</span><span class="tag">Grafana</span><span class="tag">Datadog</span><span class="tag">Sentry</span></div></div>
+<div class="skill"><h3>QA Tooling</h3><div class="tags"><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">TestRail</span><span class="tag">Azure Test Plans</span><span class="tag">Zephyr</span><span class="tag">Allure TestOps</span></div></div>
+<div class="skill"><h3>Data &amp; Test Data</h3><div class="tags"><span class="tag">Airflow (ETL/ELT)</span><span class="tag">Data warehouses</span><span class="tag">Data profiling</span><span class="tag">Mockaroo</span></div></div>
+<div class="skill"><h3>Methods &amp; Tools</h3><div class="tags"><span class="tag">Agile (Scrum, Kanban)</span><span class="tag">Waterfall</span><span class="tag">Risk-based testing</span><span class="tag">Chrome DevTools</span><span class="tag">Charles Proxy</span><span class="tag">Git / GitHub</span><span class="tag">VS Code</span><span class="tag">Figma</span><span class="tag">Draw.io</span></div></div>
 </div>
+<h2>Experience</h2>
+<div class="job"><div class="jhead"><div><span class="role">QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Jul 2026 – Sep 2026</span></div>
+<div class="proj">Agentic Product Development — container-based orchestration of multi-agent LLM teams for development and QA; responsible for the QA agent team</div>
+<ul><li>Designed and built a QA agent team from scratch: API, UI and E2E test agents, a Lead agent orchestrating their work, and an Auditor agent measuring coverage; defined agent roles, skills and templates</li><li>Established the agents' workflow end to end: task orchestration and coordination via Claude Code CLI and VS Code, isolated parallel execution with Git worktrees and Docker</li><li>Applied spec-driven development: agents derived test cases and automated tests (API, Playwright UI) from requirements; the Auditor mapped requirements to tests and flagged coverage gaps</li><li>Piloted on a Kafka–LIMS–ERP integration: ~50 API, ~10 UI and ~10 E2E tests generated and executed, speeding up test design and execution</li><li>Evaluated agent output and performance — test design quality, speed, reliability, resource use in parallel runs; caught E2E tests that missed cross-system dependencies and iterated on skills, prompts and templates to fix them</li></ul>
+<div class="env"><b>Environment:</b> Claude Code (subagents, skills, CLI) · VS Code · Git worktrees · Docker · Chrome MCP · Playwright · Kafka</div>
 </div>
-
-<div class="section">
-<div class="section-title">Summary</div>
-<p class="summary">Senior QA Engineer with 6+ years of experience in web, mobile, API and backend testing, including 3 years in fintech platforms. Proven track record of leading QA processes end-to-end: defining test strategies, building quality standards from scratch, mentoring junior and middle engineers, and driving cross-functional collaboration with development, product, and DevOps teams. Hands-on expertise in API, integration, regression and exploratory testing of distributed client-server systems, with strong experience in OAuth 2.0 and OpenID Connect validation. Practical experience with AI tools (Anthropic Claude Code certified) to accelerate test authoring, requirements analysis and QA workflows, including hands-on work building and evaluating AI agent workflows for QA tasks. Hands-on experience with Postman, SQL/PostgreSQL, Playwright, basic Python-based automation, and Allure TestOps. Skilled in risk-based testing, CI/CD validation, release governance, and quality metrics.</p>
+<div class="job"><div class="jhead"><div><span class="role">Lead QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Jan 2024 – Jun 2026</span></div>
+<div class="proj">IT consulting for a biopharma organization — harmonization of business processes and IT systems; integration and customization of COTS solutions (LabVantage LIMS, OpenClinica, Donor Management System)</div>
+<ul><li>Sole QA lead with full testing life cycle ownership: test strategy, test plan, test design, test data preparation and execution</li><li>Led QA validation of LabVantage LIMS across 13 modules for two biopharma sites; authored Validation Plans, Test Plans (OQ/PQ), Test Summary and Deviation Reports per IEEE 29119-3 and 21 CFR Part 11</li><li>Executed and managed 1,219 test cases across OQ and PQ phases; <span class="hi">0 critical failures at go-live</span> (October 2025)</li><li>Performed functional, API, UI and integration testing on the MuleSoft Anypoint platform; validated SageX3 integrations via Azure Service Bus across 26 scenarios</li><li>Reviewed and evaluated requirements, worked directly with stakeholders; completed two LabVantage trainings</li></ul>
+<div class="env"><b>Environment:</b> Scrum · Azure Test Plans · Postman · LabVantage · Anypoint Platform · Azure Service Bus · SageX3</div>
 </div>
-
-<div class="section">
-<div class="section-title">Technical Skills</div>
-<div class="skills-grid">
-<div class="skill-group">
-<h4>Security & Fintech</h4>
-<div class="tags">
-<span class="tag">OAuth 2.0</span><span class="tag">OpenID Connect</span><span class="tag">SSO</span>
-<span class="tag">Token Management</span><span class="tag">Access Control</span>
+<div class="job"><div class="jhead"><div><span class="role">Senior QA Engineer</span> · <span class="company">Access Softek</span></div><span class="dates">Mar 2023 – Apr 2026</span></div>
+<div class="proj">Fintech Platform — SSO &amp; Authentication · parallel engagement</div>
+<ul><li>Led E2E testing of fintech web and mobile (iOS, Android) applications focused on SSO and secure authentication integrations</li><li>Validated OAuth 2.0 and OpenID Connect flows: token lifecycle, session management, user access control</li><li>Performed REST API, integration and E2E testing for authentication services; analyzed logs via Datadog, Grafana, Sentry</li><li>Investigated an SSO provider that rendered a blank page on iOS and Android across all embedding modes; identified the root cause (X-Frame-Options / CSP frame-ancestors) and drove a per-provider configuration feature that resolved it</li><li>Managed deployment validation via Octopus Deploy; participated in CI/CD and quality gates</li><li>Tested mobile banking SDK (iOS/Android): configured parameters, designed test cases in Jira/Zephyr, validated on real devices</li><li>Verified secure transaction and payment-authorization flows tied to authentication, ensuring correct token validation before financial actions were processed</li></ul>
+<div class="env"><b>Environment:</b> Agile (Scrum) · Jira · Confluence · BDD (Gherkin) · Azure DevOps · Octopus Deploy · Mobile Build Tools</div>
 </div>
+<div class="job"><div class="jhead"><div><span class="role">Senior QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Nov 2023 – Jan 2024</span></div>
+<div class="proj">LIMS for recording laboratory experiments, equipment, samples and materials for a multi-site laboratory chain</div>
+<ul><li>Performed functional, API, UI and regression testing; tested complex sample-transfer and calculation logic</li><li>Designed test cases for new features from customer requirements; updated and maintained the test basis</li></ul>
+<div class="env"><b>Environment:</b> Scrum · Azure Test Plans · Postman</div>
 </div>
-<div class="skill-group">
-<h4>Automation</h4>
-<div class="tags">
-<span class="tag">Playwright (Basic)</span><span class="tag">Python (Basic)</span>
-<span class="tag">PyTest + requests (Basic)</span><span class="tag">Selenium (Basic)</span>
-<span class="tag">Cucumber</span><span class="tag">SpecFlow</span>
+<div class="job"><div class="jhead"><div><span class="role">Senior QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Sep 2022 – Nov 2023</span></div>
+<div class="proj">Software for the design and manufacturing of analog, mixed-signal and DSP integrated circuits</div>
+<ul><li>Performed functional, API, UI, integration, smoke, sanity, E2E and regression testing of client-server web applications and APIs</li><li>Applied test design techniques; reviewed and evaluated requirements</li><li>Managed release preparation, QA process and team</li></ul>
+<div class="env"><b>Environment:</b> Scrum · Azure Test Plans · Postman · phpMyAdmin</div>
 </div>
+<div class="job"><div class="jhead"><div><span class="role">Lead QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Jun 2022 – Sep 2022</span></div>
+<div class="proj">Software quality assurance project</div>
+<ul><li>Performed functional and API testing of console and web client-server applications</li><li>Prepared testing documentation and internal project instructions; onboarded new team members</li></ul>
+<div class="env"><b>Environment:</b> Confluence · AWS · Amazon Cognito · Postman · TestRail · Jira</div>
 </div>
-<div class="skill-group">
-<h4>Testing</h4>
-<div class="tags">
-<span class="tag">REST API</span><span class="tag">Integration Testing</span>
-<span class="tag">E2E</span><span class="tag">Regression</span><span class="tag">Exploratory</span>
-<span class="tag">BDD / Gherkin</span><span class="tag">Mobile (iOS/Android)</span>
+<div class="job"><div class="jhead"><div><span class="role">Manual QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Dec 2021 – Sep 2022</span></div>
+<div class="proj">Operations management software</div>
+<ul><li>Managed the full QA cycle; created smoke and regression test sets</li><li>Wrote test cases as BDD feature files for test automation and set up their synchronization into Azure Test Plans</li><li>Reported and verified defects, provided test reports and customer demos; mentored junior QAs</li></ul>
+<div class="env"><b>Environment:</b> Scrum · Azure DevOps · Azure Test Plans · Jira/Confluence · Figma · Cucumber · Gherkin</div>
 </div>
+<div class="job"><div class="jhead"><div><span class="role">Manual QA Engineer</span> · <span class="company">Quantori</span></div><span class="dates">Aug 2020 – Jun 2021</span></div>
+<div class="proj">Planning, visualization and documentation of molecular biology procedures</div>
+<ul><li>Performed functional, API, UI, integration, smoke, sanity, E2E and regression testing of desktop and web client-server applications and APIs</li><li>Created BDD scenarios in Gherkin; prepared and maintained test documentation; took part in CI/CD and requirements review</li><li>Managed release preparation, QA process and team</li></ul>
+<div class="env"><b>Environment:</b> Scrum · Azure DevOps · Azure Test Plans · Jira/Confluence · Cucumber · Gherkin · Postman</div>
 </div>
-<div class="skill-group">
-<h4>Tools & Stack</h4>
-<div class="tags">
-<span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Allure</span>
-<span class="tag">Azure DevOps</span><span class="tag">SQL/PostgreSQL</span><span class="tag">Docker</span>
-<span class="tag">Grafana</span><span class="tag">Datadog</span><span class="tag">Sentry</span>
-<span class="tag">Charles Proxy</span><span class="tag">Linux CLI</span>
-<span class="tag">Wireshark</span><span class="tag">ADB</span>
+<div class="job"><div class="jhead"><div><span class="role">Earlier Career</span> · <span class="company">Technical &amp; Customer Support</span></div><span class="dates">Apr 2017 – Aug 2020</span></div>
+<ul><li><b>Technical Support Specialist</b> (Nov 2019 – Aug 2020) — IT infrastructure support for a multinational retail company: Office 365, Active Directory, Pulse Secure, enterprise networks</li><li><b>Technical Support Engineer</b> (Sep 2019 – Nov 2019) — enterprise software company: Exchange Server, Active Directory, DNS, TCP/IP</li><li><b>Customer Support Specialist</b> (Apr 2017 – Sep 2019) — e-commerce company</li></ul>
 </div>
-</div>
-<div class="skill-group">
-<h4>Methodology</h4>
-<div class="tags">
-<span class="tag">Agile / Scrum</span><span class="tag">Waterfall</span>
-<span class="tag">CI/CD</span><span class="tag">Chrome DevTools</span>
-</div>
-</div>
-<div class="skill-group">
-<h4>AI Tools</h4>
-<div class="tags">
-<span class="tag highlight">Claude Code (Anthropic certified)</span>
-<span class="tag">AI agents</span><span class="tag">AI-assisted workflows</span>
-<span class="tag">Test case generation</span><span class="tag">Requirements analysis</span>
-</div>
-</div>
-</div>
-</div>
-
-<div class="section">
-<div class="section-title">Experience</div>
-
-<div class="job">
-<div class="job-header">
-<span class="job-title">Senior QA Engineer</span>
-<span class="job-date">Mar 2023 — Apr 2026</span>
-</div>
-<div class="job-company">Access Softek</div>
-<div class="job-project">Fintech Platform (SSO & Authentication)</div>
-<ul>
-<li>Led end-to-end testing of fintech web and mobile (iOS, Android) applications with a focus on secure authentication and SSO integrations.</li>
-<li>Validated OAuth 2.0 and OpenID Connect flows — token lifecycle, session management, and user access control.</li>
-<li>Analyzed application logs and traces for root-cause investigation (Datadog, Grafana, Sentry).</li>
-<li>Performed REST API, integration, and E2E testing for identity and authentication services.</li>
-<li>Strengthened regression coverage for authentication flows, reducing risk of critical production defects.</li>
-<li>Managed deployment validation using Octopus Deploy; participated in CI/CD and release verification.</li>
-<li>Contributed to quality gates for security-sensitive features.</li>
-</ul>
-<div class="job-stack"><strong>Stack:</strong> Agile (Scrum), Jira, Confluence, BDD (Gherkin), Azure DevOps, Octopus Deploy, Mobile Build Tools</div>
-</div>
-
-<div class="job">
-<div class="job-header">
-<span class="job-title">QA Test Lead</span>
-<span class="job-date">Jan 2024 — Jun 2026</span>
-</div>
-<div class="job-company">Quantori</div>
-<div class="job-project">LIMS Validation — Enterprise Biopharma Client (LabVantage)</div>
-<ul>
-<li>Led QA validation of enterprise LIMS platform across 13 modules for two biopharma sites; acted as sole QA Test Lead.</li>
-<li>Authored full validation documentation suite: Validation Plans, Test Plans (OQ/PQ), Test Summary Reports per IEEE 29119-3 and 21 CFR Part 11.</li>
-<li>Executed and managed 1,219 test cases across OQ and PQ phases; achieved 0 critical failures at go-live (October 2025).</li>
-<li>Validated SageX3/MuleSoft integrations via Azure Service Bus; tested 26 integration scenarios.</li>
-</ul>
-<div class="job-stack"><strong>Stack:</strong> Regulated (21 CFR Part 11, GAMP), LabVantage LIMS, Jira, Confluence, SageX3, MuleSoft</div>
-</div>
-
-<div class="job">
-<div class="job-header">
-<span class="job-title">Senior QA Engineer</span>
-<span class="job-date">Dec 2021 — Dec 2023</span>
-</div>
-<div class="job-company">Quantori</div>
-<div class="job-project">Operations Management Software</div>
-<ul>
-<li>Acted as de facto QA Lead: defined test strategy, coordinated testing, owned release quality decisions.</li>
-<li>Built BDD test scenarios (Cucumber/Gherkin), smoke and regression suites; mentored junior and middle QA engineers.</li>
-</ul>
-<div class="job-stack"><strong>Stack:</strong> Scrum, Waterfall, Azure DevOps, Jira, Confluence, Cucumber, Gherkin</div>
-</div>
-
-<div class="job">
-<div class="job-header">
-<span class="job-title">QA Engineer</span>
-<span class="job-date">Sep 2019 — Dec 2021</span>
-</div>
-<div class="job-company">Quantori</div>
-<div class="job-project">Biopharma Software & Bioinformatics</div>
-<ul>
-<li>Performed API, UI, integration and E2E testing for scientific software; validated data integrity via SQL queries.</li>
-<li>Designed BDD test scenarios; participated in CI/CD and release preparation.</li>
-</ul>
-<div class="job-stack"><strong>Stack:</strong> Scrum, Azure DevOps, Jira, Confluence, SQL, AWS, Postman, TestRail</div>
-</div>
-
-<div class="job">
-<div class="job-header">
-<span class="job-title">Technical Support Engineer</span>
-<span class="job-date">Apr 2017 — Mar 2019</span>
-</div>
-<div class="job-company">Intermedia</div>
-<div class="job-project">Enterprise Software</div>
-<ul>
-<li>Provided technical support and issue resolution for enterprise clients.</li>
-<li>Investigated and escalated complex technical issues.</li>
-<li>Worked with Active Directory, Exchange Server, DNS, and TCP/IP.</li>
-</ul>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-title">Personal Projects</div>
-<p style="font-size:14px;color:#333;margin-bottom:10px;">API Test Automation (Python) — personal project: built API test suite using PyTest and requests; practiced parametrized tests, fixtures, positive/negative/edge case scenarios.</p>
-<p style="font-size:14px;color:#333;">Scion (Internal R&amp;D) — AI Agent Orchestration Platform: built a QA agent team from scratch, defining agent roles and skills for test-related tasks using Claude Code as the primary harness; set up agent workflow via CLI and VS Code; evaluated agent-authored test quality and measured test coverage produced by the agents.</p>
-</div>
-
-<div class="section">
-<div class="section-title">Certifications</div>
-<ul class="cert-list">
-<li><span>ISTQB Foundation Level</span><span class="cert-year">2023</span></li>
-<li><span>QA Tester: Software Testing Foundation Level</span><span class="cert-year">2020</span></li>
-<li><span>Python Course for Beginners — Stepik</span><span class="cert-year">2025</span></li>
-<li><span>Claude Code in Action — Anthropic Education</span><span class="cert-year">2026</span></li>
-<li><span>Data QA School (Quantori) — DB theory, SQL (Foundation to Advanced), Data Profiling, ETL/Airflow, Databricks</span><span class="cert-year">2026</span></li>
-</ul>
-</div>
-
-<div class="section">
-<div class="section-title">Education</div>
-<div class="edu">
-<div class="edu-left">
-<h3>Pskov State University</h3>
-<p>Master's Degree in Linguistic Studies</p>
-</div>
-<div class="edu-right">2007 — 2012</div>
-</div>
-</div>
-
-<div class="section">
-<div class="section-title">Additional Information</div>
-<div class="additional">
-<strong>Languages:</strong> Russian — Native &nbsp;&middot;&nbsp; English — Fluent &nbsp;&middot;&nbsp; German — Basic &nbsp;&middot;&nbsp; Spanish — Basic
-</div>
-</div>
-
-<div class="footer">
-ksenilin@gmail.com &nbsp;&middot;&nbsp; +374 43 29 23 72 &nbsp;&middot;&nbsp; Armenia · Open to relocation
-</div>
-</div>
+<h2>Personal Projects</h2>
+<div class="job"><div class="jhead"><div><span class="role">API Test Automation Framework</span> · <span class="company">Personal project</span></div><span class="dates">2025</span></div><ul><li>Built from scratch an API test automation framework in Python with PyTest and Playwright for a public REST API</li><li>Reusable fixtures and parametrized tests; response schema validation; positive and negative scenarios</li><li>Allure reporting for test runs</li></ul><div class="env"><b>Environment:</b> Python · PyTest · Playwright · Allure</div></div>
+<h2>Certifications</h2><ul><li>Claude Code in Action — Anthropic</li><li>ISTQB Foundation Level (2023)</li><li>LabVantage Administration training (2024)</li><li>Data QA School — SQL, ETL/Airflow, Databricks (2026)</li><li>Python Course for Beginners — Stepik (2025)</li><li>QA Engineer: Software Testing Foundation Level (2020)</li></ul>
+<h2>Education &amp; Languages</h2><p class="flat">Pskov State University (2007–2012) — Master's Degree in Linguistic Studies</p><p class="flat">Russian: Native · English: Fluent (C1) · German: Elementary (A2) · Spanish: Basic</p>
+<footer>Updated September 2026</footer>
+</main>
 </body>
 </html>
