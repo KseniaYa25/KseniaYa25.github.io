@@ -1,251 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Янковская Ксения — QA Engineer</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 15px; line-height: 1.6; color: #1a1a1a; background: #f5f5f5;
-    }
-    .page {
-      max-width: 860px; margin: 40px auto; background: #fff;
-      padding: 56px 64px; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-    }
-    .header { margin-bottom: 32px; }
-    .header h1 { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 4px; }
-    .header .subtitle { font-size: 14px; color: #555; margin-bottom: 12px; }
-    .contacts { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #444; }
-    .contacts a { color: #0066cc; text-decoration: none; }
-    .contacts a:hover { text-decoration: underline; }
-    .section { margin-bottom: 32px; }
-    .section-title {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.08em; color: #888; border-bottom: 1px solid #e8e8e8;
-      padding-bottom: 6px; margin-bottom: 16px;
-    }
-    .summary { font-size: 14px; color: #333; line-height: 1.7; }
-    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .skill-group h4 { font-size: 12px; font-weight: 600; color: #555; margin-bottom: 8px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag { background: #f0f4ff; color: #2255aa; font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 500; }
-    .job { margin-bottom: 28px; }
-    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
-    .job-title { font-size: 15px; font-weight: 600; color: #111; }
-    .job-date { font-size: 13px; color: #888; white-space: nowrap; }
-    .job-company { font-size: 13px; color: #555; margin-bottom: 2px; }
-    .job-project { font-size: 13px; color: #777; font-style: italic; margin-bottom: 10px; }
-    .job ul { padding-left: 18px; }
-    .job li { font-size: 14px; color: #333; margin-bottom: 5px; line-height: 1.6; }
-    .job-stack { font-size: 12px; color: #777; margin-top: 10px; }
-    .job-stack strong { color: #555; }
-    .cert-list { list-style: none; }
-    .cert-list li { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
-    .cert-list li:last-child { border-bottom: none; }
-    .cert-year { font-size: 12px; color: #999; white-space: nowrap; margin-left: 12px; }
-    .edu { display: flex; justify-content: space-between; align-items: baseline; }
-    .edu-left h3 { font-size: 15px; font-weight: 600; }
-    .edu-left p { font-size: 13px; color: #666; font-style: italic; }
-    .edu-right { font-size: 13px; color: #999; }
-    .additional { font-size: 14px; color: #333; line-height: 1.8; }
-    .footer { text-align: center; font-size: 12px; color: #bbb; margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
-    .footer a { color: #0066cc; text-decoration: none; }
-    @media (max-width: 640px) {
-      .page { padding: 32px 24px; margin: 0; border-radius: 0; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .job-header { flex-direction: column; }
-      .edu { flex-direction: column; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ксения Янковская</title>
+<meta name="description" content="Senior QA engineer — AI-first подход к обеспечению качества, life sciences и финтех.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: single measured column, left-aligned; a mono rail carries dates and labels. */
+:root{
+  --paper:#F6F7F6; --ink:#151D1B; --muted:#5C6865; --line:#DFE3E1;
+  --accent:#0E6A61; --accent-soft:#E2EFEC; --surface:#FFFFFF;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1413; --ink:#E4E9E7; --muted:#96A29F; --line:#26302E;
+    --accent:#5FBCAF; --accent-soft:#15302C; --surface:#131A19; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1413; --ink:#E4E9E7; --muted:#96A29F; --line:#26302E;
+  --accent:#5FBCAF; --accent-soft:#15302C; --surface:#131A19; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:16.5px; line-height:1.62;
+  padding-inline:24px; padding-block:0;
+}
+.wrap{max-width:760px; margin-inline:auto; padding-block:64px 88px}
+a{color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+/* Masthead */
+.masthead{border-bottom:2px solid var(--ink); padding-bottom:22px; margin-bottom:12px}
+h1{
+  font-family:var(--sans); font-weight:600; font-size:clamp(2rem,6vw,2.9rem);
+  line-height:1.08; letter-spacing:-0.02em; margin:0 0 10px; text-wrap:balance;
+}
+.role{font-family:var(--sans); font-size:1.02rem; font-weight:500; color:var(--accent); margin:0 0 4px}
+.place{font-family:var(--mono); font-size:0.78rem; color:var(--muted); letter-spacing:0.02em; margin:0}
+.contacts{
+  display:flex; flex-wrap:wrap; gap:8px 22px; list-style:none; margin:16px 0 0; padding:0;
+  font-family:var(--mono); font-size:0.8rem;
+}
+.contacts li{min-width:0; overflow-wrap:anywhere}
+
+/* Sections */
+section{margin-top:52px}
+h2{
+  font-family:var(--mono); font-size:0.72rem; font-weight:500; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 20px;
+  padding-bottom:8px; border-bottom:1px solid var(--line);
+}
+.lede{font-size:1.06rem; margin:0 0 16px}
+p{margin:0 0 14px}
+p:last-child{margin-bottom:0}
+
+/* Figures */
+.figures{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:28px}
+.fig{background:var(--surface); padding:18px 16px}
+.fig b{display:block; font-family:var(--sans); font-size:1.5rem; font-weight:600; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; line-height:1.1}
+.fig span{display:block; font-family:var(--mono); font-size:0.7rem; color:var(--muted); margin-top:6px; line-height:1.4}
+@media (max-width:560px){ .figures{grid-template-columns:1fr} }
+
+/* Experience */
+.job{display:grid; grid-template-columns:132px 1fr; gap:0 26px; padding:22px 0; border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0; padding-top:0}
+.when{font-family:var(--mono); font-size:0.74rem; color:var(--muted); letter-spacing:0.01em; padding-top:4px; line-height:1.5}
+.what{min-width:0}
+.title{font-family:var(--sans); font-weight:600; font-size:1.04rem; margin:0 0 2px; line-height:1.3}
+.org{font-family:var(--sans); font-size:0.9rem; color:var(--muted); margin:0 0 10px}
+.org .tag{
+  font-family:var(--mono); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase;
+  color:var(--accent); background:var(--accent-soft); padding:2px 7px; border-radius:2px; margin-left:8px;
+  white-space:nowrap;
+}
+.what ul{margin:0; padding-left:1.1em}
+.what li{margin-bottom:7px}
+.what li:last-child{margin-bottom:0}
+@media (max-width:620px){
+  .job{grid-template-columns:1fr; gap:0}
+  .when{padding-top:0; margin-bottom:8px}
+}
+
+/* Skills */
+.skills{display:grid; gap:0}
+.skill{display:grid; grid-template-columns:132px 1fr; gap:0 26px; padding:13px 0; border-top:1px solid var(--line)}
+.skill:first-child{border-top:0}
+.skill dt{font-family:var(--mono); font-size:0.74rem; color:var(--accent); letter-spacing:0.01em; padding-top:3px}
+.skill dd{margin:0; font-size:0.97rem; min-width:0}
+@media (max-width:620px){
+  .skill{grid-template-columns:1fr; gap:0}
+  .skill dt{margin-bottom:4px}
+}
+
+/* Flat lists */
+.flat{font-size:0.97rem}
+.flat b{font-family:var(--sans); font-weight:600}
+.sep{color:var(--line); padding:0 6px}
+
+</style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-  <div class="header">
-    <h1>Янковская Ксения</h1>
-    <div class="subtitle">Senior QA Engineer · 5+ лет опыта · ISTQB certified</div>
-    <div class="contacts">
-      <a href="tel:+79113547476">+7 911 354 74 76</a>
-      <a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a>
-      <span>Санкт-Петербург</span>
+<header class="masthead">
+  <h1>Ксения Янковская</h1>
+  <p class="role">Senior QA Engineer — AI-first подход к обеспечению качества</p>
+  <p class="place">Life sciences и финтех · Ереван, Армения (UTC+4) · удалённо · открыта к релокации в ЕС и Великобританию</p>
+  <ul class="contacts">
+    <li><a href="mailto:ksenilin@gmail.com">ksenilin@gmail.com</a></li>
+    <li>+374 43 29 23 72</li>
+    <li><a href="https://www.linkedin.com/in/kseniya-yankovskaya">linkedin.com/in/kseniya-yankovskaya</a></li>
+  </ul>
+</header>
 
-    </div>
+<section id="about">
+  <h2>О себе</h2>
+  <p class="lede">Шесть лет в QA. Последние три года — единственный QA на проекте: лабораторные платформы в биофарме, до этого финтех — аутентификация и платежи.</p>
+  <p>Занимаюсь тестированием на всех этапах — от разбора требований до оценки готовности релиза: проектирую и выполняю тесты, веду дефекты до закрытия. Проверяю результат в базе и в логах, а не только через интерфейс.</p>
+  <p>Основная специализация — API, бэкенд и интеграции между системами. Последний проект — обмен данными между ERP и лабораторной платформой через шину сообщений.</p>
+  <p>Последний год работаю с AI в тестировании: построила команду агентов, которые генерируют тесты из требований, и занималась ревью того, что они выдают.</p>
+  <div class="figures">
+    <div class="fig"><b>1 219</b><span>тест-кейсов спроектировано и выполнено на платформе из 13 модулей</span></div>
+    <div class="fig"><b>0</b><span>критических дефектов на go-live, две площадки, октябрь 2025</span></div>
+    <div class="fig"><b>26</b><span>интеграционных сценариев между ERP и LIMS через шину сообщений</span></div>
   </div>
+</section>
 
-  <div class="section">
-    <div class="section-title">О себе</div>
-    <p class="summary">
-      Senior QA Engineer с 5+ годами опыта в тестировании веб, мобильных, API и backend-систем, включая 3 года в fintech. Экспертиза в кросс-платформенном тестировании веб и мобильных приложений (iOS, Android), E2E-тестировании, API, интеграционном, регрессионном и исследовательском тестировании распределённых клиент-серверных систем. Опыт валидации аутентификации и авторизации (OAuth 2.0, OpenID Connect), обеспечения целостности данных и безопасности доступа. Практический опыт с Postman, SQL/PostgreSQL, Playwright и базовой автоматизацией на Python.
-    </p>
-  </div>
+<section id="experience">
+  <h2>Опыт</h2>
 
-  <div class="section">
-    <div class="section-title">Навыки</div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Автоматизация</h4>
-        <div class="tags">
-          <span class="tag">Playwright</span><span class="tag">Python</span>
-          <span class="tag">Selenium</span><span class="tag">Cucumber</span><span class="tag">SpecFlow</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>API и базы данных</h4>
-        <div class="tags">
-          <span class="tag">REST API</span><span class="tag">Postman</span><span class="tag">Swagger</span>
-          <span class="tag">SQL</span><span class="tag">PostgreSQL</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Безопасность и Fintech</h4>
-        <div class="tags">
-          <span class="tag">OAuth 2.0</span><span class="tag">OpenID Connect</span><span class="tag">SSO</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Тестирование</h4>
-        <div class="tags">
-          <span class="tag">E2E</span><span class="tag">Интеграционное</span>
-          <span class="tag">Регрессионное</span><span class="tag">Исследовательское</span>
-          <span class="tag">BDD / Gherkin</span><span class="tag">Мобильное (iOS/Android)</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Инструменты</h4>
-        <div class="tags">
-          <span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Allure</span>
-          <span class="tag">Azure DevOps</span><span class="tag">Docker</span>
-          <span class="tag">Grafana</span><span class="tag">Datadog</span><span class="tag">Sentry</span>
-          <span class="tag">Charles Proxy</span><span class="tag">Linux CLI</span>
-          <span class="tag">Wireshark</span><span class="tag">ADB</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Методологии</h4>
-        <div class="tags">
-          <span class="tag">Agile / Scrum</span><span class="tag">Waterfall</span>
-          <span class="tag">CI/CD</span><span class="tag">Chrome DevTools</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Опыт работы</div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-title">Senior QA Engineer</span>
-        <span class="job-date">март 2023 — апрель 2026</span>
-      </div>
-      <div class="job-project">Fintech Platform (SSO & Authentication)</div>
+  <div class="job">
+    <div class="when">июль 2026 —<br>наст. время</div>
+    <div class="what">
+      <p class="title">QA Engineer — Agentic Product Development</p>
+      <p class="org">Quantori</p>
       <ul>
-        <li>Руководила E2E-тестированием fintech веб и мобильных приложений (iOS, Android) с фокусом на безопасную аутентификацию и SSO-интеграции</li>
-        <li>Анализировала логи и трейсы приложений для root-cause расследования (Datadog, Grafana, Sentry)</li>
-        <li>Проводила REST API, интеграционное и E2E-тестирование сервисов аутентификации</li>
-        <li>Расширила регрессионное покрытие для authentication flows, снизив риск критических дефектов в продакшне</li>
-        <li>Управляла валидацией деплоев через Octopus Deploy, участвовала в CI/CD-процессах и верификации релизов</li>
-      </ul>
-      <div class="job-stack"><strong>Среда:</strong> Agile (Scrum), Jira, Confluence, Octopus Deploy, Mobile Build Tools, Azure DevOps, Grafana</div>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-title">Senior QA Engineer</span>
-        <span class="job-date">декабрь 2021 — март 2023</span>
-      </div>
-      <div class="job-company">Quantori</div>
-      <div class="job-project">Operations Management Software</div>
-      <ul>
-        <li>Руководила полным QA-циклом: определяла тест-стратегию, процессы и стандарты качества</li>
-        <li>Разрабатывала и поддерживала BDD-сценарии (Cucumber, Gherkin), синхронизировала с мануальными тест-кейсами</li>
-        <li>Создала и оптимизировала smoke и регрессионные тест-сюиты</li>
-        <li>Ввела структурированные QA-процессы и документацию, повысив эффективность команды</li>
-        <li>Менторила junior QA-инженеров, поддерживала онбординг</li>
-        <li>Предоставляла детальные тест-отчёты и демонстрации продукта стейкхолдерам</li>
-      </ul>
-      <div class="job-stack"><strong>Среда:</strong> Scrum, Waterfall, Azure DevOps, Azure Test Plans, Jira, Confluence, Cucumber, Gherkin</div>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-title">Senior QA Engineer</span>
-        <span class="job-date">ноябрь 2020 — декабрь 2021</span>
-      </div>
-      <div class="job-company">Quantori</div>
-      <div class="job-project">Biopharma Software Solutions</div>
-      <ul>
-        <li>Проводила комплексное тестирование (API, UI, интеграционное, E2E) научного ПО</li>
-        <li>Тестировала клиент-серверные архитектуры и API, валидировала данные через сложные SQL-запросы</li>
-        <li>Проектировала и реализовывала BDD-сценарии</li>
-        <li>Участвовала в CI/CD-процессах, подготовке релизов и анализе требований</li>
-      </ul>
-      <div class="job-stack"><strong>Среда:</strong> Scrum, Azure DevOps, Jira, Confluence, BDD, Cucumber</div>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-title">QA Engineer</span>
-        <span class="job-date">сентябрь 2019 — ноябрь 2020</span>
-      </div>
-      <div class="job-company">Quantori</div>
-      <div class="job-project">Bioinformatics Software</div>
-      <ul>
-        <li>Проводила функциональное, API, UI и регрессионное тестирование научных и веб-приложений</li>
-        <li>Разрабатывала тест-планы и тестовую документацию</li>
-        <li>Участвовала в CI/CD-процессах и ревью требований</li>
-      </ul>
-      <div class="job-stack"><strong>Среда:</strong> SQL, Git, AWS, Postman, TestRail, Confluence</div>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-title">Инженер технической поддержки</span>
-        <span class="job-date">апрель 2017 — март 2019</span>
-      </div>
-      <div class="job-project">Enterprise Software</div>
-      <ul>
-        <li>Техническая поддержка и решение инцидентов для корпоративных клиентов</li>
-        <li>Расследование и эскалация сложных технических проблем</li>
-        <li>Работа с: Active Directory, Exchange Server, DNS, TCP/IP</li>
+        <li>Спроектировала и построила команду QA-агентов с нуля: агенты для API, UI и E2E тестов, ведущий агент, координирующий их работу, и агент-аудитор, измеряющий покрытие относительно требований.</li>
+        <li>Применила spec-driven подход: агенты выводят тест-кейсы и автотесты из спецификаций, а не из существующего набора тестов.</li>
+        <li>Пилот на интеграции Kafka — LIMS — ERP: сгенерировано и выполнено около 50 API, 10 UI и 10 E2E тестов.</li>
+        <li>Критически разбирала вывод AI — нашла E2E-тесты, которые читались как корректные, но молча пропускали кросс-системные зависимости, и дорабатывала навыки, промпты и шаблоны агентов, пока покрытие не стало надёжным.</li>
       </ul>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Сертификаты</div>
-    <ul class="cert-list">
-      <li><span>ISTQB Foundation Level</span><span class="cert-year">2023</span></li>
-      <li><span>QA Tester: Software Testing Foundation Level</span><span class="cert-year">2020</span></li>
-      <li><span>Python Course for Beginners — Stepik</span><span class="cert-year">2025</span></li>
-      <li><span>Claude Code in Action — Anthropic Education</span><span class="cert-year">2026</span></li>
-      <li><span>Data QA School (Quantori) — теория БД, SQL (базовый–продвинутый), Data Profiling, ETL/Airflow, Databricks</span><span class="cert-year">2026</span></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Образование</div>
-    <div class="edu">
-      <div class="edu-left">
-        <h3>Псковский государственный университет</h3>
-        <p>Лингвист, переводчик</p>
-      </div>
-      <div class="edu-right">2007 — 2012</div>
+  <div class="job">
+    <div class="when">январь 2024 —<br>июнь 2026</div>
+    <div class="what">
+      <p class="title">Lead QA Engineer · Service Line Manager</p>
+      <p class="org">Quantori — ИТ-консалтинг для биофармы</p>
+      <ul>
+        <li>Единственный QA-лид на внедрении LabVantage LIMS из 13 модулей на двух площадках: тест-стратегия, тест-дизайн, подготовка данных и выполнение — 1 219 тест-кейсов, ноль критических дефектов на go-live.</li>
+        <li>Отвечала за интеграционное тестирование между SageX3 (ERP) и LIMS через MuleSoft Anypoint и Azure Service Bus — 26 сценариев: потерянные, задвоенные и пришедшие не по порядку сообщения, согласованность состояния между системами.</li>
+        <li>Функциональное, API, UI и интеграционное тестирование приложений на платформе Anypoint; OpenClinica и система управления донорами.</li>
+        <li>Как Service Line Manager вела одного QA-инженера — регулярные встречи один на один, цели обучения и развития, обратная связь по результативности; за это время она выросла от джуниора до сеньора.</li>
+        <li>Работала напрямую со стейкхолдерами по требованиям, рискам и готовности релиза.</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Дополнительная информация</div>
-    <div class="additional">
-      <strong>Языки:</strong> русский — родной &nbsp;·&nbsp; английский — свободный &nbsp;·&nbsp; немецкий — базовый
+  <div class="job">
+    <div class="when">март 2023 —<br>апрель 2026</div>
+    <div class="what">
+      <p class="title">Senior QA Engineer</p>
+      <p class="org">Access Softek — финтех<span class="tag">параллельный проект</span></p>
+      <ul>
+        <li>REST API, интеграционное и E2E тестирование сервисов аутентификации для веб- и мобильного банкинга; анализ логов в Datadog, Grafana и Sentry.</li>
+        <li>Проверяла потоки OAuth 2.0 и OpenID Connect и пути авторизации платежей: корректная валидация токена до того, как финансовая операция будет проведена.</li>
+        <li>Расследовала дефект, при котором SSO-провайдер отдавал пустую страницу на iOS и Android во всех режимах встраивания; довела до причины — заголовки X-Frame-Options и CSP frame-ancestors на стороне провайдера — и инициировала настройку на уровне провайдера.</li>
+        <li>Вела проверку деплоев через Octopus Deploy и релизные quality gates.</li>
+      </ul>
     </div>
   </div>
 
-  <div class="footer">
-    ksenilin@gmail.com &nbsp;·&nbsp; +7 911 354 74 76 &nbsp;·&nbsp; Санкт-Петербург
+  <div class="job">
+    <div class="when">август 2020 —<br>январь 2024</div>
+    <div class="what">
+      <p class="title">QA Engineer → Senior / Lead QA Engineer</p>
+      <p class="org">Quantori</p>
+      <ul>
+        <li>Функциональное, API, UI, интеграционное, E2E и регрессионное тестирование клиент-серверных веб-приложений: LIMS для сети лабораторий, ПО для проектирования микросхем, системы управления операциями и инструменты молекулярной биологии.</li>
+        <li>Тестировала сложную логику переноса образцов и расчётов; проектировала тест-кейсы по требованиям заказчика.</li>
+        <li>Вела подготовку релизов и QA-процесс; писала BDD-сценарии для автоматизации; менторила и онбордила младших QA-инженеров.</li>
+      </ul>
+    </div>
   </div>
+
+  <div class="job">
+    <div class="when">апрель 2017 —<br>август 2020</div>
+    <div class="what">
+      <p class="title">Техническая и клиентская поддержка</p>
+      <p class="org">Специалист технической поддержки · Инженер технической поддержки · Специалист клиентской поддержки</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Компетенции</h2>
+  <dl class="skills">
+    <div class="skill"><dt>AI в QA</dt><dd>Claude Code (сертификация Anthropic) — мультиагентные QA-команды, агентные воркфлоу, генерация тестов из спецификаций, аудит покрытия, критическое ревью вывода AI</dd></div>
+    <div class="skill"><dt>Тестирование</dt><dd>Мануальное, функциональное, регрессионное, интеграционное, E2E, exploratory, smoke и валидация релиз-кандидатов; тест-дизайн по рискам; классы эквивалентности и граничные значения; BDD</dd></div>
+    <div class="skill"><dt>API и данные</dt><dd>Postman, REST, Swagger / OpenAPI, Charles Proxy; SQL, PostgreSQL, Snowflake, Databricks</dd></div>
+    <div class="skill"><dt>Автоматизация</dt><dd>Python, PyTest, Playwright, Allure; Selenium (базово)</dd></div>
+    <div class="skill"><dt>Интеграции</dt><dd>MuleSoft Anypoint, Azure Service Bus, Kafka — асинхронный обмен, ретраи, дубликаты, порядок сообщений и согласованность состояния</dd></div>
+    <div class="skill"><dt>Платформы</dt><dd>LabVantage LIMS, OpenClinica, SageX3; регулируемые и валидированные среды</dd></div>
+    <div class="skill"><dt>Безопасность</dt><dd>OAuth 2.0, OpenID Connect, SSO, работа с токенами и сессиями; CSP и политики встраивания во фреймы</dd></div>
+    <div class="skill"><dt>CI/CD</dt><dd>Azure DevOps, Octopus Deploy, Docker, Git; Grafana, Datadog, Sentry, Kibana</dd></div>
+    <div class="skill"><dt>QA-инструменты</dt><dd>Jira, Confluence, TestRail, Zephyr, Azure Test Plans, Allure TestOps</dd></div>
+  </dl>
+</section>
+
+<section id="project">
+  <h2>Личный проект</h2>
+  <div class="job">
+    <div class="when">2025 —<br>наст. время</div>
+    <div class="what">
+      <p class="title">Фреймворк автоматизации API-тестов</p>
+      <p class="org">Python · PyTest · Playwright · Allure</p>
+      <ul>
+        <li>Фреймворк для публичного REST API: переиспользуемые фикстуры, параметризованные тесты, валидация схем ответов, позитивные и негативные сценарии, отчёты Allure.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <h2>Сертификации и образование</h2>
+  <p class="flat">
+    <b>Claude Code in Action</b> — Anthropic<span class="sep">·</span>
+    <b>Data QA School</b> — SQL, ETL / Airflow, Databricks, 2026<span class="sep">·</span>
+    <b>Python для начинающих</b> — Stepik, 2025<span class="sep">·</span>
+    <b>LabVantage Administration</b> — 2024<span class="sep">·</span>
+    <b>ISTQB Foundation Level</b> — 2023<span class="sep">·</span>
+    <b>QA Engineer: Software Testing Foundation Level</b> — 2020
+  </p>
+  <p class="flat" style="margin-top:14px">Псковский государственный университет, 2007–2012 — магистр, лингвистика</p>
+  <p class="flat" style="margin-top:14px">Русский (родной)<span class="sep">·</span>английский (C1)<span class="sep">·</span>немецкий (A2)<span class="sep">·</span>испанский (базовый)</p>
+</section>
 
 </div>
 </body>
